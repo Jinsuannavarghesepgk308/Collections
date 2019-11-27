@@ -34,23 +34,24 @@ int i;
   list.add(app);
   break;
   case 3:
- 
+	  if(list.isEmpty())
+	  {
+		  System.out.println("No application is installed");
+	  }
+	  else
+	  {
   Iterator itr=list.iterator();
   for(i=0;i<list.size();i++) {
   System.out.println(i+" "+itr.next());
   }
-  if(list.isEmpty())
-  {
-	  System.out.println("No application is installed");
-  }
-  else
-  {
+  
+  
 	 System.out.println("Enter the index of application to be removed");
-  }
+  
   
   int index=s.nextInt();
   list.remove(index);
-  break;
+	  }break;
   case 4:
   System.out.println("Successfully exited");
   break;
